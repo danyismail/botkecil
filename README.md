@@ -1,6 +1,13 @@
 # botkecil
 
-Hanya sebuah bot buatan tuannya @danyismail
+Hanya sebuah bot buatan tuannya [@danyismail](https://t.me/danyismail)
+
+```
+Silahkan gunakan sourcecode ini dengan bebas, mohon maaf apabila banyak kekurangannya.
+- [] clone repo ini
+- [] jalankan yarn install 
+- [] jalankan node bot.js
+```
 
 `Perlu diingat aku hanyalah sebuah bot, apa yang diperintahkan itulah yang aku jalankan`
 `Aku diciptakan tuanku pada saat dunia sedang dilanda pandemi covid19, oleh karena itu aku baru memiliki perintah untuk menampilkan data informasi kasus covid19 khususnya di Indonesia`
