@@ -8,6 +8,8 @@ const siteUrl = "https://www.covid19.go.id/";
 
 let result = ''
 let arrResult = []
+let foreignTitle = ''
+let localTitle = ''
 let foreignData = ''
 let localData = ''
 let source = 'Sumber data berasal dari https://www.covid19.go.id/'
@@ -18,9 +20,13 @@ axios(siteUrl)
         result = $('.fusion-text p').each(function(){
           arrResult.push($(this).text())
         })
+        foreignTitle =  arrResult[0].substring(0,23) + ' : ' + '\n'
+        foreignData =  arrResult[0].substring(24) + '\n'
+        localTitle =  arrResult[1].substring(0,10) + ' : ' + '\n'
+        localData =  arrResult[1].substring(10) + '\n'
       })
       .catch(console.error);
 
-bot.on('/covid19', (msg) => msg.reply.text(foreignData + '\n' +  localData + '\n' + source));
+bot.on('/covid19', (msg) => msg.reply.text(foreignTitle + foreignData + localTitle + localData + source));
 
 bot.start();
