@@ -1,5 +1,7 @@
 # botkecil
 
+![](./foto-keluarga.jpg)
+
 Hanya sebuah bot buatan tuannya @danyismail
 
 `Perlu diingat aku hanyalah sebuah bot, apa yang diperintahkan itulah yang aku jalankan`
