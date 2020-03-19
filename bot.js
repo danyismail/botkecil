@@ -1,3 +1,5 @@
+const express = require('express')
+const app = express()
 const env = require('dotenv').config()
 const TeleBot = require('telebot');
 const bot = new TeleBot(process.env.BOT_KEY)
@@ -30,3 +32,7 @@ axios(siteUrl)
 bot.on('/covid19', (msg) => msg.reply.text(foreignTitle + foreignData + localTitle + localData + source));
 
 bot.start();
+
+app.get('/', (req, res) => res.send('Bot kecil aktif'))
+
+app.listen(process.env.PORT || 5000, () => console.log(`botkecil listening on port ${port}!`))
