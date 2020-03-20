@@ -15,7 +15,7 @@ Silahkan gunakan sourcecode ini dengan bebas, mohon maaf apabila banyak kekurang
 
 `Aku diciptakan tuanku pada saat dunia sedang dilanda pandemi covid19, oleh karena itu aku baru memiliki perintah untuk menampilkan data informasi kasus covid19 khususnya di Indonesia`
 
-`Jika diriku tidak memberikan respon maka silahkan trigger [disini](https://botkecil.herokuapp.com/) agar aku hidup kembali`
+`Jika diriku tidak memberikan respon maka silahkan trigger` [disini](https://botkecil.herokuapp.com/) `agar aku hidup kembali`
 
 `Doakan saja kedepannya aku makin kaya feature yah 😄`
 
