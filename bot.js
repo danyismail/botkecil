@@ -6,7 +6,7 @@ const bot = new TeleBot(process.env.BOT_KEY)
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const siteUrl = "https://www.covid19.go.id/";
+const siteUrl = process.env.SITE_URL;
 
 let result = ''
 let arrResult = []
@@ -14,7 +14,7 @@ let foreignTitle = ''
 let localTitle = ''
 let foreignData = ''
 let localData = ''
-let source = 'Sumber data berasal dari https://www.covid19.go.id/'
+let source = `Sumber data berasal dari situs ${process.env.SITE_URL}`
 axios(siteUrl)
       .then(response => {
         const html = response.data;
