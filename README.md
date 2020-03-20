@@ -21,7 +21,7 @@ Silahkan gunakan sourcecode ini dengan bebas, mohon maaf apabila banyak kekurang
 
 ### Cara menggunakan diriku
 
-Temukan diriku di telegram dengan nama @cari_yuk
+Temukan diriku di telegram dengan nama @cekyuk_bot
 
 Aku baru memiliki 1 perintah yaitu ***/covid19***
 
