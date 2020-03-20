@@ -23,7 +23,9 @@ Silahkan gunakan sourcecode ini dengan bebas, mohon maaf apabila banyak kekurang
 
 Temukan diriku di telegram dengan nama @cari_yuk
 
-Aku baru memiliki 1 perintah yaitu \covid19
+Aku baru memiliki 1 perintah yaitu ***/covid19***
+
+Jalankan perintah tesebut
 
 Jika aku befungsi dengan baik maka tuan akan mendapatkan balasan kayak gini 
 
