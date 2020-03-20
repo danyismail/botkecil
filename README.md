@@ -2,9 +2,8 @@
 
 ![](./foto-keluarga.jpg)
 
-Hanya sebuah bot buatan tuannya @danyismail
 Hanya sebuah bot buatan tuannya [@danyismail](https://t.me/danyismail)
-
+Aku dibuat dari NodeJS dan di deploy di Heroku
 ```
 Silahkan gunakan sourcecode ini dengan bebas, mohon maaf apabila banyak kekurangannya.
 - [] clone repo ini
