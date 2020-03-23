@@ -24,10 +24,12 @@ axios(siteUrl)
           arrResult.push($(this).text())
         })
         dataGLobal = arrResult[5].split(' ')
+        console.log(dataGLobal)
         dataLokal = arrResult[6].split(' ')
         valDataGLobal.push(dataGLobal[4])
         valDataGLobal.push(dataGLobal[7])
         valDataGLobal.push(dataGLobal[9])
+        valDataGLobal.push(dataGLobal[11])
         valDataLokal.push(dataLokal[2])
         valDataLokal.push(dataLokal[4])
         valDataLokal.push(dataLokal[6])
@@ -35,13 +37,15 @@ axios(siteUrl)
         Global
         Negara / Kawasan : ${valDataGLobal[0]}
         Kasus Terkonfirmasi : ${valDataGLobal[1]}
-        Kematian : ${valDataGLobal[2]}
+        Kesembuhan : ${valDataGLobal[2]}
+        Kematian : ${valDataGLobal[3]}
 
 Indonesia
         Positif : ${valDataLokal[0]}
         Sembuh : ${valDataLokal[1]}
         Meninggal : ${valDataLokal[2]}
         `
+        console.log(info)
       })
       .catch(console.error);
 bot.on('/covid19', (msg) => msg.reply.text(info + '\n' + source));
