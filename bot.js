@@ -7,12 +7,8 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const siteUrl = process.env.SITE_URL;
-arrResult = []
-dataGLobal = []
-dataLokal = []
-valDataGLobal = []
-valDataLokal = []
-info = ''
+let arrResult = []
+let info = ''
 let source = `Sumber data berasal dari situs ${process.env.SITE_URL}`
 
 axios(siteUrl)
@@ -20,32 +16,22 @@ axios(siteUrl)
         const html = response.data;
         const $ = cheerio.load(html);
 
-        $('p').each(function(){
-          arrResult.push($(this).text())
-        })
-        dataGLobal = arrResult[5].split(' ')
-        console.log(dataGLobal)
-        dataLokal = arrResult[6].split(' ')
-        valDataGLobal.push(dataGLobal[4])
-        valDataGLobal.push(dataGLobal[7])
-        valDataGLobal.push(dataGLobal[9])
-        valDataGLobal.push(dataGLobal[11])
-        valDataLokal.push(dataLokal[2])
-        valDataLokal.push(dataLokal[4])
-        valDataLokal.push(dataLokal[6])
+        $('div.fusion-column-wrapper > div.fusion-text').find('strong').each(function(i){
+            arrResult.push($(this).text())
+          })
         info = `
         Global
-        Negara / Kawasan : ${valDataGLobal[0]}
-        Kasus Terkonfirmasi : ${valDataGLobal[1]}
-        Kesembuhan : ${valDataGLobal[2]}
-        Kematian : ${valDataGLobal[3]}
+        Negara / Kawasan : ${arrResult[3]}
+        Kasus Terkonfirmasi : ${arrResult[4]}
+        Kesembuhan : ${arrResult[5]}
+        Kematian : ${arrResult[6]}
 
-Indonesia
-        Positif : ${valDataLokal[0]}
-        Sembuh : ${valDataLokal[1]}
-        Meninggal : ${valDataLokal[2]}
+        Indonesia
+        Positif : ${arrResult[8]}
+        Sembuh : ${arrResult[9]}
+        Meninggal : ${arrResult[10]}
         `
-        console.log(info)
+        //console.log(info)
       })
       .catch(console.error);
 bot.on('/covid19', (msg) => msg.reply.text(info + '\n' + source));
