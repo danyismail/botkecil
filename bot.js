@@ -11,6 +11,10 @@ let arrResult = []
 let info = ''
 let source = `Sumber data berasal dari situs ${process.env.SITE_URL}`
 
+app.listen(process.env.PORT || 5000, () => console.log(`botkecil listening on port ${process.env.PORT}!`))
+
+app.get('/', (request, response) => response.send('Bot kecil aktif'))
+
 axios(siteUrl)
       .then(response => {
         const html = response.data;
@@ -38,6 +42,11 @@ bot.on('/covid19', (msg) => msg.reply.text(info + '\n' + source));
 
 bot.start();
 
+
+
+
+
+
 var http = require('http'); //importing http
 
 function startKeepAlive() {
@@ -64,6 +73,3 @@ function startKeepAlive() {
 
 startKeepAlive();
 
-app.get('/', (request, response) => response.send('Bot kecil aktif'))
-
-app.listen(process.env.PORT || 5000, () => console.log(`botkecil listening on port ${process.env.PORT}!`))
