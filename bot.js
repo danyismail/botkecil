@@ -27,8 +27,8 @@ axios(siteUrl)
         info = `
         Indonesia
         Kasus Terkonfirmasi : ${arrResult[4]}
-        Kesembuhan : ${arrResult[5]}
-        Kematian : ${arrResult[6]}
+        Kesembuhan : ${arrResult[6]}
+        Kematian : ${arrResult[5]}
         `
         console.log(info)
         jumlah = $('span').text()    
